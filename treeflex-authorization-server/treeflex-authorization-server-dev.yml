@@ -1,3 +1,13 @@
-treeflex:
-  test:
-    config: Treeflex Development Config
+spring:
+  datasource:
+    username: ${AUTHORIZATION_SERVER_DB_USERNAME}
+    password: ${AUTHORIZATION_SERVER_DB_PASSWORD}
+    url: jdbc:postgresql://localhost:5432/treeflex_users_db
+    driver-class-name: org.postgresql.Driver
+    jpa:
+      show-sql: false
+      open-in-view: false
+      hibernate:
+        ddl-auto: none
+        naming:
+          physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
