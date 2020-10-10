@@ -18,14 +18,14 @@ CREATE TABLE oauth_client_details
 INSERT INTO oauth_client_details (client_id, client_secret, resource_ids, scope, authorities, authorized_grant_types,
                                   web_server_redirect_uri, access_token_validity, refresh_token_validity,
                                   additional_information, autoapprove)
-VALUES ('treeflexhr', '$2y$10$uqtCmoR8td.IoojoXPAhGeE0.Wv8KNRxXeVvzOXSz5hmNOY2WqWXu', 'treeflexhr', 'read write', '',
-        'password, access_token, refresh_token, implicit', 'http://localhost:8080/login', 3600, 1800, '', '');
+VALUES ('treeflexhr', '$2y$10$uqtCmoR8td.IoojoXPAhGeE0.Wv8KNRxXeVvzOXSz5hmNOY2WqWXu', 'treeflexhr', 'read,write', '',
+        'password,access_token,refresh_token,authorization_code', 'http://localhost:8080/login', 3600, 1800, '', '');
 
 INSERT INTO oauth_client_details (client_id, client_secret, resource_ids, scope, authorities, authorized_grant_types,
                                   web_server_redirect_uri, access_token_validity, refresh_token_validity,
                                   additional_information, autoapprove)
-VALUES ('treeflextk', '$2y$10$oBK20xca5we1cACopJeKaOGu8bHrSG8s2P7GVtX56xjqZOkR6up.m', 'treeflextk', 'read write', '',
-        'password, access_token, refresh_token, implicit', 'http://localhost:8080/login', 3600, 1800, '', '');
+VALUES ('treeflextk', '$2y$10$oBK20xca5we1cACopJeKaOGu8bHrSG8s2P7GVtX56xjqZOkR6up.m', 'treeflextk', 'read,write', '',
+        'password,access_token,refresh_token,authorization_code', 'http://localhost:8080/login', 3600, 1800, '', '');
 
 
 CREATE TABLE customer
@@ -36,9 +36,9 @@ CREATE TABLE customer
     email                   VARCHAR(256) NOT NULL,
     password                VARCHAR(256) NOT NULL,
     enabled                 BOOLEAN      NOT NULL,
-    account_non_expired     BOOLEAN      NOT NULL,
-    account_non_locked      BOOLEAN      NOT NULL,
-    credentials_non_expired BOOLEAN      NOT NULL,
+    account_expired     BOOLEAN      NOT NULL,
+    account_locked      BOOLEAN      NOT NULL,
+    credentials_expired BOOLEAN      NOT NULL,
     created_by              VARCHAR(50)  NOT NULL,
     created_date            TIMESTAMP    NOT NULL DEFAULT current_timestamp,
     modified_by             VARCHAR(50)  NOT NULL,
