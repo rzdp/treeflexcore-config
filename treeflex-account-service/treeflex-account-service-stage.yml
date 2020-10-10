@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    username: ${ACCOUNT_SERVICE_DB_USERNAME}
+    password: ${ACCOUNT_SERVICE_DB_PASSWORD}
+    url: jdbc:postgresql://${ACCOUNT_SERVICE_DB_HOSTNAME}:${ACCOUNT_SERVICE_DB_PORT}/treeflex_accounts_db
+    driver-class-name: org.postgresql.Driver
+    jpa:
+      show-sql: false
+      open-in-view: false
+      hibernate:
+        ddl-auto: none
+        naming:
+          physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
