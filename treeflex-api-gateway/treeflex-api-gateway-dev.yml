@@ -5,8 +5,8 @@ spring:
         - id: treeflex-account-service
           uri: http://${ACCOUNT_SERVICE_HOSTNAME}:${ACCOUNT_SERVICE_PORT}
           predicates:
-            - Path=/accounts/**
+          - Path=/accounts/**
         - id: treeflex-email-service
           uri: http://${EMAIL_SERVICE_HOSTNAME}:${EMAIL_SERVICE_PORT}
           predicates:
-            - Path=/emails/**
+          - Path=/emails/**
