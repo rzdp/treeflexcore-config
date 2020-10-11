@@ -4,3 +4,9 @@ zuul:
     treeflex-account-service: /accounts/**
     treeflex-email-service: /emails/**
   sensitive-headers: Cookie,Set-Cookie
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'routes'
