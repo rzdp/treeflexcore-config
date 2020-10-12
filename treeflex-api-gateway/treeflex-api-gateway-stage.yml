@@ -3,6 +3,7 @@ zuul:
   routes:
     treeflex-account-service: /accounts/**
     treeflex-email-service: /emails/**
+    treeflex-payment-gateway-service: /payment-gateways/**
   sensitive-headers: Cookie,Set-Cookie
 
 treeflex-account-service:
@@ -11,6 +12,11 @@ treeflex-account-service:
     ReadTimeout: 60000
 
 treeflex-email-service:
+  ribbon:
+    ConnectTimeout: 60000
+    ReadTimeout: 60000
+
+treeflex-payment-gateway-service:
   ribbon:
     ConnectTimeout: 60000
     ReadTimeout: 60000
