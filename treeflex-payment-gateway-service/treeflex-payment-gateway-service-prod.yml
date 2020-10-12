@@ -1,0 +1,9 @@
+payment-method:
+    paypal:
+        test: Test Paypal Configuration
+    paymaya:
+        test: Test Paymaya Configuration
+    mastercard:
+        test: Test Bank Configuration
+    visa:
+        test: Test Visa Configuration
