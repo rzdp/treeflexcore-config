@@ -5,6 +5,16 @@ zuul:
     treeflex-email-service: /emails/**
   sensitive-headers: Cookie,Set-Cookie
 
+treeflex-account-service:
+  ribbon:
+    ConnectTimeout: 60000
+    ReadTimeout: 60000
+
+treeflex-email-service:
+  ribbon:
+    ConnectTimeout: 60000
+    ReadTimeout: 60000
+
 management:
   endpoints:
     web:
