@@ -16,8 +16,8 @@ resilience4j.circuitbreaker:
   configs:
     default:
       registerHealthIndicator: true
-      ringBufferSizeInClosedState: 100
-      ringBufferSizeInHalfOpenState: 20
-      waitDurationInOpenState: 50s
+      ringBufferSizeInClosedState: 10
+      ringBufferSizeInHalfOpenState: 2
+      waitDurationInOpenState: 30s
       failureRateThreshold: 50
       eventConsumerBufferSize: 10
